@@ -1,3 +1,7 @@
+* {
+  font-family: "Lato", "Kosugi Maru", sans-serif;
+}
+
 .logo {
   position: relative;
   max-height: 600px;
@@ -17,12 +21,15 @@
   bottom: 0px;
   margin-top: auto;
   margin-bottom: auto;
-  height: 30%;
-  min-height: 150px;
+  height: 35%;
+  min-height: 250px;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .logo__mask::before {
@@ -31,12 +38,31 @@
   display: block;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.35);
   z-index: 10000;
 }
 
 .logo__image {
-  position: absolute;
+  position: relative;
   z-index: 10001;
-  height: 70%;
+  height: 60%;
+  margin-bottom: 20px;
+}
+
+.logo__information {
+  position: relative;
+  z-index: 10001;
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.i_with_txt {
+  margin-right: 4px;
+}
+
+.footer {
+  background-color: #fafafa;
+  padding: 1.5rem;
+  font-size: 0.75rem;
 }
