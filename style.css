@@ -2,6 +2,18 @@
   font-family: "Lato", "Kosugi Maru", sans-serif;
 }
 
+body {
+  background-color: #f8f8f8;
+}
+
+section.section {
+  padding: 4rem 1.5rem;
+}
+
+footer.footer {
+  background-color: #ccc;
+}
+
 .logo {
   position: relative;
   max-height: 600px;
@@ -22,7 +34,7 @@
   margin-top: auto;
   margin-bottom: auto;
   height: 35%;
-  min-height: 250px;
+  min-height: 300px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -38,14 +50,14 @@
   display: block;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.15);
   z-index: 10000;
 }
 
 .logo__image {
   position: relative;
   z-index: 10001;
-  height: 60%;
+  height: 55%;
   margin-bottom: 20px;
 }
 
@@ -54,15 +66,120 @@
   z-index: 10001;
   color: white;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+}
+
+.schedule-description {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 5px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .i_with_txt {
   margin-right: 4px;
 }
 
+.timetable__row {
+  display: flex;
+  font-size: 1.5rem;
+  height: 80px;
+  justify-content: center;
+  align-content: center;
+}
+
+.timetable {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timetable__time {
+  width: 100px;
+}
+
 .footer {
   background-color: #fafafa;
   padding: 1.5rem;
   font-size: 0.75rem;
+}
+
+@media screen and (max-width: 600px) {
+  .logo__bgimage {
+    max-width: none;
+    height: 450px;
+    width: auto;
+  }
+}
+
+.speakers {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.staffs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sponsors {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  box-shadow: 1px 1px 2px #ddd;
+  border-radius: 5px;
+  margin: 10px;
+  flex-wrap: wrap;
+  background-color: white;
+  max-width: 600px;
+}
+
+.profile-card__img {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.profile-card__img img {
+  border-radius: 5px;
+  max-height: 280px;
+  max-width: 280px;
+}
+
+.profile-card__img.profile-card__img--staff {
+  padding: 5px 10px 5px 5px;
+}
+
+.profile-card__img.profile-card__img--staff img {
+  max-height: 80px;
+}
+
+.profile-card__description {
+  flex-grow: 1;
+  min-width: 200px;
+  padding: 10px;
+}
+
+.profile-card__description.profile-card__description--fullwidth {
+  width: 100%;
+}
+
+.profile-card__description.profile-card__description--staff {
+  min-width: 80px;
+  padding: 10px 10px 10px 0px;
 }
