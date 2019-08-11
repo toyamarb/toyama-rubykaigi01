@@ -22,39 +22,37 @@ section.section {
   align-items: center; }
   .logo__bgimage {
     width: 100%; }
-  .logo__mask {
+  .logo__mask, .logo__body {
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: center;
             justify-content: center;
     -webkit-box-align: center;
             align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-direction: column;
     position: absolute;
     top: 0px;
     bottom: 0px;
     margin-top: auto;
     margin-bottom: auto;
-    height: 35%;
-    min-height: 300px;
-    width: 100%;
-    padding-top: 16px;
-    padding-bottom: 16px; }
-  .logo__mask::before {
-    content: " ";
-    position: absolute;
-    display: block;
-    width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.15);
+    width: 100%; }
+  .logo__mask {
+    content: " ";
+    background-color: rgba(0, 0, 0, 0.2);
     z-index: 10000; }
+  .logo__body {
+    z-index: 10001;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    padding: 20px; }
   .logo__image {
     position: relative;
     z-index: 10001;
-    height: 55%;
+    height: 50%;
     margin-bottom: 20px; }
+    .logo__image img {
+      height: 100%; }
   @media screen and (max-width: 600px) {
     .logo__bgimage {
       max-width: none;
@@ -65,7 +63,7 @@ section.section {
     z-index: 10001;
     color: white;
     text-align: center;
-    font-size: 1.1rem; }
+    font-size: 1.2rem; }
 
 .schedule-description {
   background-color: white;
