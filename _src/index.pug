@@ -21,20 +21,21 @@ body
         .logo
           img.logo__bgimage(src='./images/himi.jpg')
           .logo__mask
-            img.logo__image(src='./images/white@3x.png')
+          .logo__body
+            .logo__image
+              img(src='./images/white@3x.png')
             .logo__information
               p.is-marginless
-                i.fas.fa-calendar-alt
-                span 2019/11/3(日)
+                i.fas.fa-calendar-alt.i_with_txt
+                span 2019/11/3 (日)
               p
                 i.fas.fa-map-marker-alt.i_with_txt
                 span 富山国際会議場 大手町フォーラム
-
   section.section
     .container.has-text-centered
       h3.title.is-3 日時・場所
       .schedule-description
-        div 2019/11/3(日) 11:00-18:00
+        div 2019/11/3 (日) 11:00-18:00
         div
           a(href='https://www.ticc.co.jp/', target='_blank') 富山国際会議場 大手町フォーラム
           span.tag

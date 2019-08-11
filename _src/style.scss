@@ -36,38 +36,39 @@ section.section {
     width: 100%;
   }
 
-  &__mask {
+  &__mask,
+  &__body {
     @include flex-center;
-    flex-direction: column;
     position: absolute;
     top: 0px;
     bottom: 0px;
     margin-top: auto;
     margin-bottom: auto;
-    height: 35%;
-    min-height: 300px;
+    height: 100%;
     width: 100%;
-    padding-top: 16px;
-    padding-bottom: 16px;
   }
 
   &__mask {
-    &::before {
-      content: " ";
-      position: absolute;
-      display: block;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.15);
-      z-index: 10000;
-    }
+    content: " ";
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+  }
+
+  &__body {
+    z-index: 10001;
+    flex-direction: column;
+    padding: 20px;
   }
 
   &__image {
     position: relative;
     z-index: 10001;
-    height: 55%;
+    height: 50%;
     margin-bottom: 20px;
+
+    img {
+      height: 100%;
+    }
   }
 
   @media screen and (max-width: 600px) {
@@ -83,7 +84,7 @@ section.section {
     z-index: 10001;
     color: white;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 
