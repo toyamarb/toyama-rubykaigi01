@@ -1,0 +1,191 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-justify-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+* {
+  font-family: "Lato", "Kosugi Maru", sans-serif;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+section.section {
+  padding: 4rem 1.5rem;
+}
+
+.logo {
+  @include flex-center;
+  position: relative;
+  max-height: 600px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__bgimage {
+    width: 100%;
+  }
+
+  &__mask {
+    @include flex-center;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 35%;
+    min-height: 300px;
+    width: 100%;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  &__mask {
+    &::before {
+      content: " ";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.15);
+      z-index: 10000;
+    }
+  }
+
+  &__image {
+    position: relative;
+    z-index: 10001;
+    height: 55%;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 600px) {
+    &__bgimage {
+      max-width: none;
+      height: 450px;
+      width: auto;
+    }
+  }
+
+  &__information {
+    position: relative;
+    z-index: 10001;
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+}
+
+.schedule-description {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 5px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.i_with_txt {
+  margin-right: 4px;
+}
+
+.timetable {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__row {
+    @include flex-center;
+    font-size: 1.5rem;
+    height: 80px;
+  }
+
+  &__time {
+    width: 100px;
+  }
+}
+
+
+.speakers {
+  @include flex-justify-center;
+  flex-wrap: wrap;
+}
+
+.staffs {
+  @include flex-justify-center;
+  flex-wrap: wrap;
+}
+
+.sponsors {
+  @include flex-justify-center;
+}
+
+.profile-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  box-shadow: 1px 1px 2px #ddd;
+  border-radius: 5px;
+  margin: 10px;
+  flex-wrap: wrap;
+  background-color: white;
+  max-width: 600px;
+
+  &__img {
+    @include flex-center;
+    flex-grow: 1;
+    padding: 10px;
+
+    img {
+      border-radius: 5px;
+      max-height: 280px;
+      max-width: 280px;
+    }
+
+    &#{&}--staff {
+      padding: 5px 10px 5px 5px;
+    }
+
+    &#{&}--staff img {
+      max-height: 80px;
+    }
+  }
+
+
+  &__description {
+    flex-grow: 1;
+    min-width: 200px;
+    padding: 10px;
+
+    &#{&}--fullwidth {
+      width: 100%;
+    }
+
+    &#{&}--staff {
+      min-width: 80px;
+      padding: 10px 10px 10px 0px;
+    }
+  }
+}
+
+
+footer.footer {
+  background-color: #ccc;
+  padding: 1.5rem;
+  font-size: 0.75rem;
+}
