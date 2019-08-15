@@ -64,6 +64,10 @@ section.section {
     color: white;
     text-align: center;
     font-size: 1.2rem; }
+  .logo__entry_description {
+    font-size: 0.75em;
+    margin-top: 6px;
+    opacity: 0.75; }
 
 .schedule-description {
   background-color: white;
