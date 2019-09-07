@@ -69,6 +69,19 @@ section.section {
     margin-top: 6px;
     opacity: 0.75; }
 
+.entry-area {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 5px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto; }
+  .entry-area .button {
+    width: 85%;
+    max-width: 400px; }
+    .entry-area .button:last-child {
+      margin-top: 20px; }
+
 .schedule-description {
   background-color: white;
   padding: 2rem;
