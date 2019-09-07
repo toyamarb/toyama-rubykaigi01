@@ -94,6 +94,24 @@ section.section {
   }
 }
 
+.entry-area {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 5px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .button {
+    width: 85%;
+    max-width: 400px;
+
+    &:last-child {
+      margin-top: 20px;
+    }
+  }
+}
+
 .schedule-description {
   background-color: white;
   padding: 2rem;
