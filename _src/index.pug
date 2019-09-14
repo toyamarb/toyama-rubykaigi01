@@ -74,7 +74,7 @@ body
           .profile-card__img
             img(src='./images/speaker/soutaro.jpeg')
           .profile-card__description
-            .is-size-4 松本宗太郎
+            .is-size-4 松本 宗太郎
             .is-size-6 Soutaro Matsumoto
             div
               a(href='https://github.com/soutaro', target='_blank')
@@ -85,7 +85,7 @@ body
           .profile-card__img
             img(src='./images/speaker/junichiito.jpeg')
           .profile-card__description
-            .is-size-4 伊藤淳一
+            .is-size-4 伊藤 淳一
             .is-size-6 Junichi Ito
             div
               a(href='https://github.com/JunichiIto', target='_blank')
@@ -184,13 +184,136 @@ body
     .container.has-text-centered
       h3.title.is-3 タイムテーブル
       .timetable
-        .is-size-4 Coming soon
-        .is-size-6 後日、本ページで公開予定です
-        //
-          <div class="timetable__row">
-          <div class="timetable__time">00:00</div>
-          <div class="timetable__content">開場受付開始</div>
-          </div>
+        .timetable__row
+          .timetable__time 10:20-10:55
+          .timetable__content.timetable__content--small 開場・受付開始
+        .timetable__row
+          .timetable__time 10:55-11:00
+          .timetable__content.timetable__content--small オープニング
+        .timetable__row
+          .timetable__time 11:00-11:40
+          .timetable__content
+            .timetable__content_row.timetable__content_row--title 招待講演「○○からRubyへ」
+            .timetable__content_row 伊藤 淳一
+        .timetable__row
+          .timetable__time 11:40-11:50
+          .timetable__content.timetable__content--small 休憩
+        .timetable__row
+          .timetable__time 11:50-12:15
+          .timetable__content
+            .timetable__content_row.timetable__content_row--title T.B.D
+            .timetable__content_row 黒曜
+        .timetable__row
+          .timetable__time 12:15-12:30
+          .timetable__content
+            .timetable__content_row.timetable__content_row--title 「初心者PHPerがRubyキメて思うこと」
+            .timetable__content_row oratake
+        .timetable__row
+          .timetable__time 12:30-13:50
+          .timetable__content.timetable__content--small 昼休憩
+        .timetable__row
+          .timetable__time 13:50-14:15
+          .timetable__content
+            .timetable__content_row.timetable__content_row--title T.B.D
+            .timetable__content_row suginoy
+        .timetable__row
+          .timetable__time 14:15-14:40
+          .timetable__content
+            .timetable__content_row.timetable__content_row--title T.B.D
+            .timetable__content_row joker1007
+        .timetable__row
+          .timetable__time 14:40-14:50
+          .timetable__content.timetable__content--small 休憩
+        .timetable__row
+          .timetable__time 14:50-15:15
+          .timetable__content
+            .timetable__content_row.timetable__content_row--title 「北陸で Ruby なお仕事に携わるための3つの戦略」
+            .timetable__content_row 清原 智和
+        .timetable__row
+          .timetable__time 15:15-15:40
+          .timetable__content
+            .timetable__content_row.timetable__content_row--title T.B.D
+            .timetable__content_row 伊藤 浩一
+        .timetable__row
+          .timetable__time 15:40-16:05
+          .timetable__content
+            .timetable__content_row.timetable__content_row--title 「mrubyでハローワールド！」
+            .timetable__content_row 羽角 均
+        .timetable__row
+          .timetable__time 16:05-16:25
+          .timetable__content.timetable__content--small 休憩
+        .timetable__row
+          .timetable__time 16:25-17:25
+          .timetable__content
+            .timetable__content_row.timetable__content_row--title Lightning Talks
+            .timetable__content_row
+              .timetable__content_lt_speaker
+                | muryoimpl
+                a(href='https://github.com/muryoimpl', target='_blank')
+                  i.fab.fa-github
+                a(href='https://twitter.com/muryoimpl', target='_blank')
+                  i.fab.fa-twitter
+            .timetable__content_row
+              .timetable__content_lt_speaker
+                | ふぁらお加藤
+                a(href='https://github.com/PharaohKJ', target='_blank')
+                  i.fab.fa-github
+                a(href='https://twitter.com/PharaohKJ', target='_blank')
+                  i.fab.fa-twitter
+            .timetable__content_row
+              .timetable__content_lt_speaker
+                | 相生ゆら
+                a(href='https://github.com/Little-Rubyist', target='_blank')
+                  i.fab.fa-github
+                a(href='https://twitter.com/Little_Rubyist', target='_blank')
+                  i.fab.fa-twitter
+            .timetable__content_row
+              .timetable__content_lt_speaker
+                | wtnabe
+                a(href='https://github.com/wtnabe', target='_blank')
+                  i.fab.fa-github
+                a(href='https://twitter.com/wtnabe', target='_blank')
+                  i.fab.fa-twitter
+            .timetable__content_row
+              .timetable__content_lt_speaker
+                | Yuka Kato
+                a(href='https://github.com/yucao24hours', target='_blank')
+                  i.fab.fa-github
+                a(href='https://twitter.com/yucao24hours', target='_blank')
+                  i.fab.fa-twitter
+            .timetable__content_row
+              .timetable__content_lt_speaker
+                | 水尻裕人
+                a(href='https://github.com/mizukmb', target='_blank')
+                  i.fab.fa-github
+                a(href='https://twitter.com/mizukmb', target='_blank')
+                  i.fab.fa-twitter
+            .timetable__content_row
+              .timetable__content_lt_speaker
+                | よしだ たけひこ
+                a(href='https://github.com/chihayafuru', target='_blank')
+                  i.fab.fa-github
+                a(href='https://twitter.com/chihayafuru', target='_blank')
+                  i.fab.fa-twitter
+            .timetable__content_row
+              .timetable__content_lt_speaker
+                | 羽角 均
+                a(href='https://github.com/hasumikin', target='_blank')
+                  i.fab.fa-github
+                a(href='https://twitter.com/hasumikin', target='_blank')
+                  i.fab.fa-twitter
+
+        .timetable__row
+          .timetable__time 17:25-17:35
+          .timetable__content.timetable__content--small 休憩
+        .timetable__row
+          .timetable__time 17:35-18:15
+          .timetable__content
+            .timetable__content_row.timetable__content_row--title 招待講演
+            .timetable__content_row 松本 宗太郎
+        .timetable__row
+          .timetable__time 18:15
+          .timetable__content.timetable__content--small クロージング
 
   section.section
     .container.has-text-centered

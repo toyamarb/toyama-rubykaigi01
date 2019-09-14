@@ -95,7 +95,7 @@ section.section {
 
 .timetable {
   background-color: white;
-  padding: 1rem;
+  padding: 1rem 0rem;
   border-radius: 10px;
   max-width: 600px;
   margin-left: auto;
@@ -108,8 +108,7 @@ section.section {
     -webkit-box-align: center;
             align-items: center;
     min-height: 80px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
     position: relative;
     flex-wrap: wrap; }
     .timetable__row:not(:last-child)::before {
@@ -120,26 +119,40 @@ section.section {
       width: 80%;
       height: 1px;
       border-top: 1px solid #eee;
-      margin-left: 10%; }
+      margin-left: 6%; }
   .timetable__time {
-    min-width: 80px;
+    width: 140px;
     display: -webkit-box;
     display: flex;
-    -webkit-box-pack: center;
-            justify-content: center;
-    -webkit-box-flex: 1;
-            flex-grow: 1; }
+    -webkit-box-pack: end;
+            justify-content: flex-end;
+    color: #707070; }
+  @media screen and (max-width: 600px) {
+    .timetable__time {
+      width: 100%;
+      -webkit-box-pack: center;
+              justify-content: center; } }
   .timetable__content {
     min-width: 200px;
     display: -webkit-box;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
     -webkit-box-flex: 1;
             flex-grow: 1;
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     -webkit-box-pack: center;
             justify-content: center; }
     .timetable__content.timetable__content--small {
-      font-size: 1.1rem; }
+      font-size: 1.0rem; }
+  .timetable__content_row.timetable__content_row--title {
+    font-size: 1.1rem;
+    font-weight: bold; }
+  .timetable__content_lt_speaker {
+    display: inline-block; }
+    .timetable__content_lt_speaker > a:first-child {
+      margin-left: 5px; }
 
 .speakers {
   display: -webkit-box;
