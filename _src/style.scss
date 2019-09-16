@@ -10,7 +10,6 @@
   align-items: center;
 }
 
-
 * {
   font-family: "Lato", "Kosugi Maru", sans-serif;
 }
@@ -127,23 +126,52 @@ section.section {
 
 .timetable {
   background-color: white;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 10px;
-  max-width: 500px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 
   &__row {
-    @include flex-center;
-    font-size: 1.5rem;
-    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    flex-wrap: wrap;
+
+    &:not(:last-child)::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0px;
+      width: 80%;
+      height: 1px;
+      border-top: 1px solid #eee;
+      margin-left: 10%;
+    }
   }
 
   &__time {
-    width: 100px;
+    min-width: 80px;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  &__content {
+    min-width: 200px;
+    display: flex;
+    flex-grow: 1;
+    font-size: 1.5rem;
+    justify-content: center;
+
+    &#{&}--small {
+      font-size: 1.1rem;
+    }
   }
 }
-
 
 .speakers {
   @include flex-justify-center;
@@ -171,6 +199,10 @@ section.section {
   background-color: white;
   max-width: 600px;
 
+  &#{&}--speaker {
+    margin: 25px;
+  }
+
   &__img {
     @include flex-center;
     flex-grow: 1;
@@ -182,15 +214,20 @@ section.section {
       max-width: 280px;
     }
 
+    &#{&}--speaker {
+      padding: 5px 10px 5px 5px;
+    }
+    &#{&}--speaker img {
+      max-height: 220px;
+    }
+
     &#{&}--staff {
       padding: 5px 10px 5px 5px;
     }
-
     &#{&}--staff img {
       max-height: 80px;
     }
   }
-
 
   &__description {
     flex-grow: 1;
@@ -201,13 +238,16 @@ section.section {
       width: 100%;
     }
 
+    &#{&}--speaker {
+      min-width: 200px;
+      padding: 10px 10px 10px 0px;
+    }
     &#{&}--staff {
       min-width: 80px;
       padding: 10px 10px 10px 0px;
     }
   }
 }
-
 
 footer.footer {
   background-color: #ccc;
