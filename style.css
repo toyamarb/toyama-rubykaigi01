@@ -95,22 +95,51 @@ section.section {
 
 .timetable {
   background-color: white;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 10px;
-  max-width: 500px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto; }
   .timetable__row {
     display: -webkit-box;
     display: flex;
-    -webkit-box-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
             align-items: center;
-    font-size: 1.5rem;
-    height: 80px; }
+    min-height: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    flex-wrap: wrap; }
+    .timetable__row:not(:last-child)::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0px;
+      width: 80%;
+      height: 1px;
+      border-top: 1px solid #eee;
+      margin-left: 10%; }
   .timetable__time {
-    width: 100px; }
+    min-width: 80px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 1;
+            flex-grow: 1; }
+  .timetable__content {
+    min-width: 200px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-flex: 1;
+            flex-grow: 1;
+    font-size: 1.5rem;
+    -webkit-box-pack: center;
+            justify-content: center; }
+    .timetable__content.timetable__content--small {
+      font-size: 1.1rem; }
 
 .speakers {
   display: -webkit-box;
@@ -152,6 +181,8 @@ section.section {
   flex-wrap: wrap;
   background-color: white;
   max-width: 600px; }
+  .profile-card.profile-card--speaker {
+    margin: 25px; }
   .profile-card__img {
     display: -webkit-box;
     display: flex;
@@ -166,6 +197,10 @@ section.section {
       border-radius: 5px;
       max-height: 280px;
       max-width: 280px; }
+    .profile-card__img.profile-card__img--speaker {
+      padding: 5px 10px 5px 5px; }
+    .profile-card__img.profile-card__img--speaker img {
+      max-height: 220px; }
     .profile-card__img.profile-card__img--staff {
       padding: 5px 10px 5px 5px; }
     .profile-card__img.profile-card__img--staff img {
@@ -177,6 +212,9 @@ section.section {
     padding: 10px; }
     .profile-card__description.profile-card__description--fullwidth {
       width: 100%; }
+    .profile-card__description.profile-card__description--speaker {
+      min-width: 200px;
+      padding: 10px 10px 10px 0px; }
     .profile-card__description.profile-card__description--staff {
       min-width: 80px;
       padding: 10px 10px 10px 0px; }
