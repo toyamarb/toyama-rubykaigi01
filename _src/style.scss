@@ -208,6 +208,8 @@ section.section {
 
 .sponsors {
   @include flex-justify-center;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .profile-card {
@@ -224,6 +226,16 @@ section.section {
 
   &#{&}--speaker {
     margin: 25px;
+  }
+
+  &#{&}--sponsor {
+    width: 80%;
+  }
+
+  @media screen and (max-width: 600px) {
+    &#{&}--sponsor {
+      width: 95%;
+    }
   }
 
   &__img {
@@ -244,6 +256,17 @@ section.section {
     &#{&}--speaker img {
       max-height: 220px;
     }
+
+    &#{&}--sponsor {
+      width: 130px;
+      min-height: 150px;
+    }
+
+    &#{&}--sponsor img {
+      max-height: 130px;
+      max-width: 95%;
+    }
+
 
     &#{&}--staff {
       padding: 5px 10px 5px 5px;
