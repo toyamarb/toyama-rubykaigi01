@@ -197,7 +197,24 @@ section.section {
   margin: 10px;
   flex-wrap: wrap;
   background-color: white;
-  max-width: 600px; }
+  max-width: 520px; }
+  .profile-card__row {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
+    flex-wrap: wrap; }
+  .profile-card.profile-card--keynote {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+            align-items: center;
+    min-height: 550px; }
   .profile-card.profile-card--speaker {
     margin: 25px; }
   .profile-card.profile-card--sponsor {
@@ -246,6 +263,13 @@ section.section {
     .profile-card__description.profile-card__description--staff {
       min-width: 80px;
       padding: 10px 10px 10px 0px; }
+  .profile-card__session_title {
+    padding: 10px 20px 20px 20px;
+    font-weight: bold; }
+  .profile-card__session_description {
+    font-size: 0.8em;
+    padding: 0 15px 15px 15px;
+    text-align: left; }
 
 footer.footer {
   background-color: #ccc;

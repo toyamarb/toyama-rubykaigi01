@@ -222,7 +222,21 @@ section.section {
   margin: 10px;
   flex-wrap: wrap;
   background-color: white;
-  max-width: 600px;
+  max-width: 520px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &#{&}--keynote {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    min-height: 550px;
+  }
 
   &#{&}--speaker {
     margin: 25px;
@@ -295,6 +309,17 @@ section.section {
       min-width: 80px;
       padding: 10px 10px 10px 0px;
     }
+  }
+
+  &__session_title {
+    padding: 10px 20px 20px 20px;
+    font-weight: bold;
+  }
+
+  &__session_description {
+    font-size: 0.8em;
+    padding: 0 15px 15px 15px;
+    text-align: left;
   }
 }
 
