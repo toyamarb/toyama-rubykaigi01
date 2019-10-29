@@ -70,28 +70,46 @@ body
     .container.has-text-centered
       h3.title.is-3 招待公演
       .speakers
-        .profile-card
-          .profile-card__img
-            img(src='./images/speaker/soutaro.jpeg')
-          .profile-card__description
-            .is-size-4 松本 宗太郎
-            .is-size-6 Soutaro Matsumoto
-            div
-              a(href='https://github.com/soutaro', target='_blank')
-                i.fab.fa-github
-              a(href='https://twitter.com/soutaro', target='_blank')
-                i.fab.fa-twitter
-        .profile-card
-          .profile-card__img
-            img(src='./images/speaker/junichiito.jpeg')
-          .profile-card__description
-            .is-size-4 伊藤 淳一
-            .is-size-6 Junichi Ito
-            div
-              a(href='https://github.com/JunichiIto', target='_blank')
-                i.fab.fa-github
-              a(href='https://twitter.com/jnchito', target='_blank')
-                i.fab.fa-twitter
+        .profile-card.profile-card--keynote
+          .profile-card__row
+            .profile-card__img
+              img(src='./images/speaker/soutaro.jpeg')
+            .profile-card__description
+              .is-size-4 松本 宗太郎
+              .is-size-6 Soutaro Matsumoto
+              div
+                a(href='https://github.com/soutaro', target='_blank')
+                  i.fab.fa-github
+                a(href='https://twitter.com/soutaro', target='_blank')
+                  i.fab.fa-twitter
+          .profile-card__row
+            .profile-card__session
+              .profile-card__session_title
+                .is-size-5 「型なし言語のための型」
+              .profile-card__session_description
+                p プログラミング言語のうち、SchemeやJavaScript、そしてRubyを含む言語は「型なし」と分類されます。つまり、言語が型システムの定義を含まず、プログラムはコンパイル時の型検査なしに実行されるようなもののことです。
+                p ところが、この型なし言語に型を付けようという（一見矛盾した）試みに取り組んだ人は多く、けっこう長い歴史があります。この歴史を振り返り、最近の流行について分析し、さらにRubyのための型のデザインについて議論します。
+        .profile-card.profile-card--keynote
+          .profile-card__row
+            .profile-card__img
+              img(src='./images/speaker/junichiito.jpeg')
+            .profile-card__description
+              .is-size-4 伊藤 淳一
+              .is-size-6 Junichi Ito
+              div
+                a(href='https://github.com/JunichiIto', target='_blank')
+                  i.fab.fa-github
+                a(href='https://twitter.com/jnchito', target='_blank')
+                  i.fab.fa-twitter
+          .profile-card__row
+            .profile-card__session
+              .profile-card__session_title
+                .is-size-5 「○○からRubyへ」
+              .profile-card__session_description
+                p Rubyプログラマとして、かれこれ7〜8年活動してきた私ですが、それまではRubyを使ったことはなく、他の言語でシステム開発をやってきました。
+                p 昔と今を比べると、「なんかいろいろ変わったなあ」と思うところが多々あります。
+                p そこで、この発表では以前使っていた言語とRubyの比較や、その他、僕自身が感じている「自分を取り巻く環境の違い」などを紹介します。
+                p Rubyをまだ使ったことがなく、「Rubyって実際どうなの？いいの？悪いの？」と疑問に思っている方が、「へ〜、面白そう！ちょっとRubyを触ってみようかな」と思えるような情報をご提供できれば幸いです。
 
   section.section
     .container.has-text-centered
